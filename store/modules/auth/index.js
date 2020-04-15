@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////
+////          //////////////////////////////////////////////////
+////  Getters //////////////////////////////////////////////////
+////          //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+import _getters_isAuthenticated from './_getters/isAuthenticated'
+import _getters_authStatus from './_getters/authStatus'
+import _getters_sessionToken from './_getters/sessionToken'
+
+////////////////////////////////////////////////////////////////
+////            ////////////////////////////////////////////////
+////  Actions   ////////////////////////////////////////////////
+////            ////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+import _actions_authRequest from './_actions/authRequest'
+import _actions_authLogout from './_actions/authLogout'
+
+////////////////////////////////////////////////////////////////
+////              //////////////////////////////////////////////
+////  Mutations   //////////////////////////////////////////////
+////              //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+import _mutation_authRequest from './_mutations/authRequest'
+import _mutation_authSuccess from './_mutations/authSuccess'
+import _mutation_authError from './_mutations/authError'
+import _mutation_authLogout from './_mutations/authLogout'
+
+import state from './state'
+
+export default {
+    namespaced: true,
+    state: state,
+    getters: {
+        isAuthenticated: _getters_isAuthenticated,
+        authStatus: _getters_authStatus,
+        sessionToken: _getters_sessionToken
+    },
+    mutations: {
+        'AUTH_REQUEST': _mutation_authRequest,
+        'AUTH_SUCCESS': _mutation_authSuccess,
+        'AUTH_ERROR': _mutation_authError,
+        'AUTH_LOGOUT': _mutation_authLogout
+    },
+    actions: {
+        'AUTH_REQUEST': _actions_authRequest,
+        'AUTH_LOGOUT': _actions_authLogout
+    }
+}

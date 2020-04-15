@@ -1,0 +1,342 @@
+@import "variables.styl"
+
+h1
+    font-size 20px
+    line-height 28px
+    margin-top indent(4)
+    margin-bottom indent(2)
+
+h2
+    font-size 14px
+    line-height 20px
+    margin-top indent(2)
+
+p
+    font-size 12px
+    line-height 24px
+    margin-top indent(2)
+
+pre
+    padding 0
+    margin 0
+
+table
+    width 100%
+    background-color transparent
+
+    th, td
+        padding indent(1)
+        vertical-align top
+        border-top 1px solid rgba(0, 0, 0, 0.1)
+        line-height 18px
+        font-size 14px
+
+        &:first-child
+            padding-left indent(2)
+
+        &:last-child
+            padding-right indent(2)
+
+        a
+            color color-blue
+
+    thead th
+        vertical-align bottom
+        border-top-width  0
+        line-height 15px
+        color rgba(72, 84, 101, 0.4)
+        font-weight normal
+        white-space nowrap
+
+    tr
+        background-color color-white
+        transition 200ms
+
+    tbody
+        tr:hover
+            background-color color-white - 10%
+
+        td:last-child
+            vertical-align middle
+            text-align center
+            padding 0 indent(1)
+
+.row
+    display -ms-flexbox
+    display flex
+
+.gutter-2
+    margin-left indent(-1)
+    margin-right indent(-1)
+    & > .col
+        flex-grow 1
+        padding-left indent(1)
+        padding-right indent(1)
+
+.gutter-4
+    margin-left indent(-2)
+    margin-right indent(-2)
+    & > .col
+        flex-grow 1
+        padding-left indent(2)
+        padding-right indent(2)
+
+.d-flex
+    display -ms-flexbox !important
+    display flex !important
+
+.justify-content-between
+    justify-content space-between
+
+.justify-content-end
+    justify-content flex-end
+
+.align-items-center
+    align-items center
+
+.align-items-end
+    align-items end
+
+.container
+    margin 0 48px
+
+.with-shadow
+    box-shadow -1px 2px 4px rgba(110, 146, 172, 0.270352)
+    border-radius 4px
+    background-color color-white
+    margin-bottom 24px
+    a
+        color color-blue
+
+.m-auto
+    margin auto
+
+.mb-1
+    margin-bottom indent(1)
+
+.mb-4
+    margin-bottom indent(4)
+
+.ml-auto
+    margin-left auto
+
+.ml-1
+    margin-left indent(1)
+
+.ml-2
+    margin-left indent(2)
+
+.ml-4
+    margin-left indent(4)
+
+.ml-5
+    margin-left indent(5)
+
+.mt-1
+    margin-top indent(1)
+
+.mt-2
+    margin-top indent(2)
+
+.mt-3
+    margin-top indent(3)
+
+.mt-4
+    margin-top indent(4)
+
+.mr-1
+    margin-right indent(1)
+
+.mr-2
+    margin-right indent(2)
+
+.mx-1
+    margin-left indent(1)
+    margin-right indent(1)
+
+.p-2
+    padding indent(2)
+
+.pl-4
+    padding-left indent(4)
+
+.w-30
+    width 33.33%
+
+.w-33
+    width 33.33%
+
+.w-50
+    width 50%
+
+.w-70
+    width 50%
+
+.w-100
+    width 100%
+
+.button-blue
+    height 36px
+    border-radius 50px
+    padding 0 indent(2)
+    display inline-flex
+    align-items center
+    line-height 21px
+    font-size 14px
+    color color-blue
+    transition all 500ms ease
+    cursor pointer
+    box-shadow color-blue 0 0px 0px 2px inset
+    background-color transparent
+    border 0
+
+    &:hover
+        box-shadow color-blue 0 0px 0px 40px inset
+        color #fff
+        img
+            filter: invert(100%) sepia(0%) saturate(0) hue-rotate(36deg) brightness(250%) contrast(101%)
+            -webkit-filter: invert(100%) sepia(0%) saturate(0) hue-rotate(36deg) brightness(250%) contrast(101%)
+
+    img
+        margin-right indent(1)
+
+    .img-white
+        display none
+
+    .img-blue
+        display block
+    &.blue-fill
+        background-color color-blue
+        color color-white
+        box-shadow -1px 2px 4px rgba(110, 146, 172, 0.270352)
+        border-radius 4px
+        line-height 21px
+        font-size 14px
+        padding indent(2)
+        img
+            margin-right 0
+            margin-left indent(1)
+
+.add-row-button
+    display flex
+    align-items center
+    justify-content center
+    height 24px
+    margin-top 16px
+    border 1px solid #d8d8d8
+
+.back-blue
+    background-color color-blue
+
+input[type=text], input[type=number], input[type=email], input[type=password]
+    font-size 14px
+    padding 8px
+    border 1px solid #e8e8e8
+.text-red
+    color color-red
+
+.previous-page {
+    height 48px
+    background-color #283E6A
+    display flex
+    align-items center
+    color color-white
+    line-height 24px
+    font-size 14px
+    font-weight bold
+    .previous-page__back {
+        display flex
+        height 48px
+        width 48px
+        background-color #10244B
+        cursor pointer
+        margin-right indent(2)
+        img {
+            margin auto
+        }
+    }
+    .edit-title {
+        margin-left indent(1)
+        cursor pointer
+    }
+}
+
+.w-10 {
+    width 10%
+}
+
+.w-30 {
+    width 30%
+}
+
+.w-40 {
+    width 40%
+}
+
+.w-50 {
+    width 50%
+}
+
+.w-60 {
+    width 60%
+}
+
+.w-70 {
+    width 70%
+}
+
+.w-100 {
+    width 100%
+}
+
+.v-select .dropdown-toggle {
+    border-radius 0
+}
+
+.text-center
+    text-align center
+
+.text-no-wrap
+    white-space nowrap
+
+.round
+    border-radius 50%
+
+img.img-responsive
+    max-width 100%
+    max-height 100%
+
+.text-input-filter
+    display flex
+    width 390px
+    margin-right auto
+    // border-bottom 1px solid rgba(155, 166, 175, 0.4)
+
+    input
+        border 0
+        width 100%
+
+.grid
+    .grid-row
+        display flex
+        flex-wrap wrap
+        margin-left indent(-1)
+        margin-right indent(-1)
+        .grid-col-3
+            width 25%
+            padding indent(1)
+
+.tooltip-link
+    text-decoration underline
+    text-decoration-style dashed
+    cursor pointer
+
+.client-card
+    font-size 13px
+    font-weight bold
+
+.v-select .dropdown-menu
+
+    .active
+        & > a
+            opacity 0.2
